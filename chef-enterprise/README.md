@@ -12,6 +12,10 @@ It includes:
 
 The install can take a couple of minutes 
 
+![Chef Enterprise Installation Fig 1](https://raw.githubusercontent.com/devonartis/vagrant-boxes/master/chef-enterprise/chefInstall1.jpg?token=AEnNsobz23o-tgcKq57Z2ZjC2_1GhR15ks5ZrT8WwA%3D%3D)
+
+Image 2
+
 ![Chef Enterprise Installation](https://raw.githubusercontent.com/devonartis/vagrant-boxes/master/chef-enterprise/chefCompleteRubyComplete.jpg?token=AEnNsn4UNSxQQ9Ba78uGP5XMnfdld6qEks5ZrT5CwA%3D%3D)
 This chefserver.sh install chef server the process will take a couple of minutes
 to install.

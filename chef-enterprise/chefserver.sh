@@ -8,7 +8,7 @@ rm -rf chef-server-core-12.16.2-1.el7.x86_64.rpm
 yum install -y ruby
 chef-server-ctl reconfigure 
 chef-server-ctl user-create vagrant vagrant vagrant vagrant@vagrant.dev 'vagrant' --filename vagrant-rsa
-chef-server-ctl org-create artissample 'Devon Artis, Inc' --association_user vagrant --filename artissample-validator.pem
+chef-server-ctl org-create yourorgname 'Your Orgname' --association_user vagrant --filename yourorgname-validator.pem
 chef-server-ctl install chef-manage
 chef-manage-ctl reconfigure --accept-license
 
