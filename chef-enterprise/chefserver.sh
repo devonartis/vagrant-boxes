@@ -6,6 +6,7 @@ wget https://packages.chef.io/files/stable/chef-server/12.16.2/el/7/chef-server-
 rpm -Uvh chef-server-core-12.16.2-1.el7.x86_64.rpm
 rm -rf chef-server-core-12.16.2-1.el7.x86_64.rpm
 yum install -y ruby
+yum install -y git
 chef-server-ctl reconfigure 
 chef-server-ctl user-create vagrant vagrant vagrant vagrant@vagrant.dev 'vagrant' --filename vagrant-rsa
 chef-server-ctl org-create yourorgname 'Your Orgname' --association_user vagrant --filename yourorgname-validator.pem

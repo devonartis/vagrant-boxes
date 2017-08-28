@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# configure hosts file for our internal network defined by Vagrantfile
+# configure hosts file for our internal network defined by Vagrantfile.old
 echo "Adding vagrant ip to host file"
 cat >> /etc/hosts <<EOL
 

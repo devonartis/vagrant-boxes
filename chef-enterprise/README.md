@@ -38,4 +38,12 @@ to install.
 2. scp the starter kit to the workstation node @ 10.0.5.30
 
 
+###### Special Thanks 
+
+I like to Thanks ![Jeff Geerling] (https://github.com/geerlingguy) Check out his Github I used
+his Centos7 box instead of building my own and actually the idea to create Vagrant boxes for quick POC's 
+and tutorials.
+
+
+
 
