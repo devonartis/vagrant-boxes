@@ -1,0 +1,49 @@
+# Defines our Vagrant environment
+#
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.ssh.insert_key=false
+  config.vm.synced_folder ".", "/vagrant", disabled:true
+  config.vm.provider :virtualbox do |v|
+    v.memory = 1024
+    v.linked_clone = true
+  end
+
+    #create cherServer  node
+    config.vm.define :chef do |chefserver|
+    	#chefserver.vm.box = "centos/7"
+        chefserver.vm.hostname = "chefserver.dev"
+        chefserver.vm.network :private_network, ip: "10.0.5.20"
+#        chefserver.vm.provider "virtualbox" do |vb|
+#        	vb.memory = "1024"
+#        end
+        chefserver.vm.provision :shell, path: "chefserver.sh"
+	
+    end
+
+    config.vm.define :work do |wrkstation|
+#    	wrkstation.vm.box = "centos/7"
+        wrkstation.vm.hostname = "chefworkstation.dev"
+        wrkstation.vm.network :private_network, ip: "10.0.5.30"
+#        wrkstation.vm.provider "virtualbox" do |vb|
+#                vb.memory = "256"
+#        end
+        wrkstation.vm.provision :shell, path: "wrkstation.sh"
+    end
+
+    config.vm.define :node do |node|
+#    	node.vm.box = "centos/7"
+        node.vm.hostname = "chefnode1.dev"
+        node.vm.network :private_network, ip: "10.0.5.40"
+#        node.vm.provider "virtualbox" do |vb|
+#                vb.memory = "256"
+#        end
+        node.vm.provision :shell, path: "node.sh" 
+    end
+
+    
+
+end
